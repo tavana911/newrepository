@@ -9,6 +9,7 @@
    CSS CUSTOM PROPERTIES
    ============================================================ */
 :root {
+  /* base palette – all blues unified to a calmer shade */
   --black:       #f0f4f8;
   --dark:        #e4eaf2;
   --card:        #ffffff;
@@ -16,10 +17,14 @@
   --border:      rgba(21, 13, 232, 0.08);
   --border-hover:rgba(1, 8, 233, 0.15);
 
-  --blue:        #1a8fff;
-  --blue-dim:    rgba(26, 143, 255, 0.10);
-  --blue-glow:   rgba(26, 143, 255, 0.25);
-  --blue-light:  #4daaff;
+  /* calm blue tone applied everywhere
+     adjust these values if you'd like a different variant */
+  --blue:        #5faeff;
+  /* rgb components of the blue for use with rgba() */
+  --blue-rgb:    95, 174, 255;
+  --blue-dim:    rgba(var(--blue-rgb), 0.10);
+  --blue-glow:   rgba(var(--blue-rgb), 0.25);
+  --blue-light:  #a1cfff;
 
   --gold:        #b8943f;
   --gold-dim:    rgba(201, 168, 76, 0.12);
@@ -38,9 +43,10 @@
   --transition-slow:   0.6s ease;
 
   --radius-none: 0;
-  --shadow-blue: 0 0 40px rgba(26, 143, 255, 0.15);
+  --shadow-blue: 0 0 40px rgba(95, 174, 255, 0.15);
   --shadow-gold: 0 0 40px rgba(201, 168, 76, 0.10);
 }
+
 
 /* ============================================================
    PAGE PRELOADER (GPU-friendly: transform + opacity only)
@@ -138,7 +144,7 @@ img { max-width: 100%; display: block; }
   position: fixed;
   width: 36px;
   height: 36px;
-  border: 1px solid rgba(26, 143, 255, 0.5);
+  border: 1px solid rgba(var(--blue-rgb), 0.5);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
@@ -156,7 +162,7 @@ img { max-width: 100%; display: block; }
   right: 0;
   z-index: 900;
   padding: 1.2rem 0;
-  background: #1a8fff;
+  background: #ffffffc2;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-bottom: 1px solid rgba(252, 254, 255, 0.719);
@@ -171,7 +177,8 @@ img { max-width: 100%; display: block; }
 }
 
 .nav-logo-img:hover {
-  filter: brightness(0) saturate(100%) invert(55%) sepia(100%) saturate(600%) hue-rotate(190deg) brightness(120%);
+  /* maintain same filter transition but tune to new blue hue if necessary */
+  filter: brightness(0) saturate(100%) invert(52%) sepia(95%) saturate(500%) hue-rotate(188deg) brightness(116%);
   transform: scale(1.04);
 }
 
@@ -242,15 +249,20 @@ img { max-width: 100%; display: block; }
 }
 
 .btn-nav-cta:hover {
-  background: rgba(7, 3, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.693) !important;
   color: #ffffff !important;
 }
 
 /* Mobile nav toggle */
 .navbar-toggler {
-  border: 1px solid rgba(252, 251, 254, 0.866) !important;
+  border: 1px solid rgba(var(--blue-rgb),0.7) !important;
   border-radius: 0 !important;
   padding: 0.4rem 0.6rem;
+  color: var(--blue) !important;
+}
+
+.navbar-toggler-icon {
+  color: var(--light rgba(15, 15, 156, 0.375)) !important;
 }
 
 /* .navbar-toggler-icon {
@@ -302,8 +314,8 @@ img { max-width: 100%; display: block; }
   inset: 0;
   z-index: 0;
   background-image:
-    linear-gradient(rgba(26, 143, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26, 143, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(var(--blue-rgb), 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--blue-rgb), 0.03) 1px, transparent 1px);
   background-size: 80px 80px;
   mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.1) 0%, transparent 75%);
   -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.1) 0%, transparent 75%);
@@ -362,7 +374,7 @@ img { max-width: 100%; display: block; }
 .hero-statement {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: rgba(26, 38, 52, 0.4);
+  color: rgba(73, 132, 199, 0.4);
   letter-spacing: 0.05em;
   line-height: 2.1;
   margin-bottom: 3rem;
@@ -426,13 +438,13 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-mono);
   font-size: 0.62rem;
   line-height: 2;
-  color: rgba(26, 143, 255, 0.5);
+  color: rgba(var(--blue-rgb), 0.5);
 }
 
-.code-keyword { color: rgba(26, 143, 255, 0.9); }
+.code-keyword { color: rgba(var(--blue-rgb), 0.9); }
 .code-string  { color: rgba(201, 168, 76, 0.8); }
 .code-comment { color: rgba(0, 0, 0, 0.3); }
-.code-fn      { color: rgba(26, 143, 255, 0.7); }
+.code-fn      { color: rgba(var(--blue-rgb), 0.7); }
 
 .blink {
   display: inline-block;
@@ -637,7 +649,7 @@ img { max-width: 100%; display: block; }
 }
 
 .stat-card:hover {
-  border-color: rgba(26, 143, 255, 0.25);
+  border-color: rgba(var(--blue-rgb), 0.25);
   background: var(--card-hover);
   transform: translateY(-3px);
 }
@@ -693,7 +705,7 @@ img { max-width: 100%; display: block; }
 }
 
 .badge-blue {
-  border-color: rgba(26, 143, 255, 0.4);
+  border-color: rgba(var(--blue-rgb), 0.4);
   color: var(--blue);
 }
 
@@ -957,7 +969,7 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 
-.step-num-dev  { color: rgba(26, 143, 255, 0.28); }
+.step-num-dev  { color: rgba(var(--blue-rgb), 0.28); }
 .step-num-film { color: rgba(201, 168, 76, 0.28); }
 
 .step-name {
@@ -1034,7 +1046,7 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 
-.avatar-blue  { background: var(--blue-dim);  color: var(--blue);  border: 1px solid rgba(26, 143, 255, 0.3); }
+.avatar-blue  { background: var(--blue-dim);  color: var(--blue);  border: 1px solid rgba(var(--blue-rgb), 0.3); }
 .avatar-gold  { background: var(--gold-dim);  color: var(--gold);  border: 1px solid rgba(201, 168, 76, 0.3); }
 .avatar-white { background: rgba(0, 0, 0, 0.05); color: var(--white); border: 1px solid var(--border); }
 
@@ -1073,7 +1085,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(26, 143, 255, 0.07) 0%, transparent 70%);
+  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(var(--blue-rgb), 0.07) 0%, transparent 70%);
 }
 
 .contact-content { position: relative; z-index: 1; }
@@ -1304,4 +1316,23 @@ img { max-width: 100%; display: block; }
     font-size: 0.4rem;
     display: none;
   }
+}
+
+/* extra tweaks for true mobile‑full responsiveness */
+@media (max-width: 767.98px) {
+  .hero-content {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+  .hero-actions a {
+    margin-bottom: 0.75rem;
+  }
+  .stat-card {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-headline { font-size: 2.5rem; }
+  .hero-sub { font-size: 1rem; }
 }

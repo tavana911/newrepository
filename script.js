@@ -50,13 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!ring) return;
         ring.style.width       = '54px';
         ring.style.height      = '54px';
-        ring.style.borderColor = 'rgba(26, 60, 255, 0.77)';
+        ring.style.borderColor = 'rgba(95, 174, 255, 0.77)';
       });
       el.addEventListener('mouseleave', () => {
         if (!ring) return;
         ring.style.width       = '36px';
         ring.style.height      = '36px';
-        ring.style.borderColor = 'rgba(26, 144, 255, 0.22)';
+        ring.style.borderColor = 'rgba(95, 174, 255, 0.22)';
       });
     });
   }
