@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAVANA MEDIA AND DIGITAL | Creative Technologist - Frontend Dev & Cinematography</title>
+  <meta name="description" content="TAVANA MEDIA AND DIGITAL — Multidisciplinary creative technologist specializing in Frontend Web Development, Cinematography, Video Editing, and Visual Storytelling. Building user-first digital products and compelling visual narratives." />
+  <meta name="keywords" content="frontend developer, web development, cinematography, video editing, creative technologist, portfolio, TAVANA MEDIA" />
+  <meta name="author" content="TAVANA MEDIA AND DIGITAL" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tavana-media.com/" />
+  <meta property="og:title" content="TAVANA MEDIA AND DIGITAL | Creative Technologist" />
+  <meta property="og:description" content="Multidisciplinary creative technologist specializing in Frontend Web Development, Cinematography, and Video Editing." />
+  <meta property="og:image" content="https://tavana-media.com/TAVANA-removebg-preview.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://tavana-media.com/" />
+  <meta property="twitter:title" content="TAVANA MEDIA AND DIGITAL | Creative Technologist" />
+  <meta property="twitter:description" content="Multidisciplinary creative technologist specializing in Frontend Web Development, Cinematography, and Video Editing." />
+  <meta property="twitter:image" content="https://tavana-media.com/TAVANA-removebg-preview.png" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://tavana-media.com/" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+  <!-- Font loading (preconnect + stylesheet with swap) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Critical inline styles (small subset for first paint) -->
+  <style>
+    html,body{height:100%;}
+    body{background:linear-gradient(135deg,#f7fbff 0%,#eef6f9 50%,#f6f8ff 100%);color:var(--white);font-family:DM Sans, sans-serif;font-weight:300;}
+    #hero{min-height:100vh;display:flex;align-items:center;padding:8rem 0 4rem;}
+    .hero-bg{background-size:cover;background-position:center;background-repeat:no-repeat}
+  </style>
+
+  <!-- External Portfolio Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Page Preloader (removed on full load) -->
+  <div id="page-preloader" class="preloader" aria-hidden="true">
+    <div class="preloader-inner" role="img" aria-label="Loading">
+      <div class="loader-dot" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav class="tavana-nav navbar navbar-expand-lg">
+    <div class="container">
+
+      <!-- Logo + Brand -->
+      <a class="navbar-brand d-flex align-items-center gap-3" href="#hero">
+        <img src="TAVANA-removebg-preview.png"
+             alt="TAVANA Media and Digital Logo"
+             class="nav-logo-img" />
+        <div>
+          <div class="nav-brand-text">TAVANA<span>.</span></div>
+          <div class="nav-brand-sub">Media &amp; Digital</div>
+        </div>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 gap-2 mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link-item" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link-item" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link-item" href="#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link-item" href="#process">Process</a></li>
+          <li class="nav-item"><a class="nav-link-item" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item ms-lg-3">
+            <a href="#contact" class="btn btn-nav-cta">Get In Touch</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-overlay"></div>
+
+    <div class="container position-relative" style="z-index:5;">
+      <div class="row align-items-center gy-5">
+
+        <!-- Left: Text -->
+        <div class="col-lg-7 hero-content">
+          <div class="hero-eyebrow">TAVANA MEDIA AND DIGITAL</div>
+          
+<h1 class="hero-headline">
+            <span class="headline-line line-blue" data-delay="0">DIGITAL</span><br>
+            <span class="headline-line" data-delay="1">EXPERIENCES.</span><br>
+            <span class="headline-line line-gold" data-delay="2">CRAFTING</span><br>
+            <span class="headline-line" data-delay="3">VISUAL STORIES.</span>
+          </h1>
+          <p class="hero-sub">
+            A multidisciplinary creative technologist where code meets cinema — building user-first digital products and producing compelling visual narratives that engage audiences and solve real problems.
+          </p>
+          <div class="hero-statement">
+            Frontend Development &amp; <br>
+            Cinematography &amp; Video Production<br>
+            Visual Storytelling &amp; Post-Production<br>
+            One unified creative vision.
+          </div>
+          <div class="hero-actions">
+            <a href="#work" class="btn-primary-custom" id="devBtn">
+              <span>◈</span> View Development Work
+            </a>
+            <a href="#work" class="btn-ghost-custom" id="filmBtn">
+              <span>▶</span> Watch Cinematic Projects
+            </a>
+            <a href="#contact" class="btn-outline-custom">
+              <span>→</span> Contact Me
+            </a>
+          </div>
+      
+        </div>
+
+      </div><!-- /row -->
+    </div><!-- /container -->
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span class="scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════ -->
+  <section id="about" class="section-pad bg-dark-alt">
+    <div class="container">
+      <div class="row gy-5 align-items-center">
+
+        <!-- Left -->
+        <div class="col-lg-5 reveal">
+          <div class="section-label">Hello, I'm</div>
+          <h2 class="section-title">
+            ADEWOLE ADAM<br><span style="color:var(--blue)">GBADEGESIN</span>
+          </h2>
+
+          <!-- Stats -->
+          <div class="row g-3 mt-1">
+            <div class="col-6"><div class="stat-card">
+              <div class="stat-num">3+</div>
+              <div class="stat-label">Years Creating</div>
+            </div></div>
+            <div class="col-6"><div class="stat-card">
+              <div class="stat-num">∞</div>
+              <div class="stat-label">Creative Vision</div>
+            </div></div>
+            <div class="col-6"><div class="stat-card">
+              <div class="stat-num">01</div>
+              <div class="stat-label">Unified Identity</div>
+            </div></div>
+            <div class="col-6"><div class="stat-card">
+              <div class="stat-num">3×</div>
+              <div class="stat-label">Industry Depth</div>
+            </div></div>
+          </div>
+
+          <!-- Badges -->
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <span class="badge-tavana badge-blue">Frontend Dev</span>
+            <!-- <span class="badge-tavana badge-blue">Web Engineering</span> -->
+            <span class="badge-tavana badge-gold">Cinematography</span>
+            <span class="badge-tavana badge-gold">Video Editing</span>
+            <span class="badge-tavana">Color Grading</span>
+            <span class="badge-tavana">Motion Graphics</span>
+            <span class="badge-tavana badge-blue">Visa Assistance</span>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div class="col-lg-7 about-text reveal reveal-delay-2">
+          <p>Most creators choose a lane. <strong>I operate in the space between them.</strong> At TAVANA MEDIA AND DIGITAL, I bring together frontend engineering and visual storytelling into a single, cohesive practice — because the best digital products and the best films share a common DNA: intention, structure, and emotional resonance.</p>
+
+          <p class="highlight-quote">Analytical thinking sharpens the story. Cinematic awareness elevates the interface.</p>
+
+          
+          <p>I design and develop responsive website, produce high quality 
+            videos from concept to final delivery, 
+            and provide Professional travel and visa consulatant Services</p>
+
+          <p style="font-size:0.8rem; color:var(--muted); font-family:var(--font-mono); letter-spacing:0.05em; margin-top:2rem;">
+            Looking to build a website, produce a video, or need visa assistance?
+            <a href="#contact" style="color:var(--blue);">→ GET IN TOUCH</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════════ -->
+  <section id="skills" class="section-pad">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Capabilities</div>
+        <h2 class="section-title">DUAL<br><span style="color:var(--gold)">EXPERTISE</span></h2>
+      </div>
+
+      <div class="row g-4 mt-2">
+
+        <!-- Dev Panel -->
+        <div class="col-lg-6 reveal reveal-delay-1">
+          <div class="skill-panel">
+            <div class="d-flex align-items-center gap-3 skill-panel-header-border">
+              <div class="skill-icon-box skill-icon-dev">⟨/⟩</div>
+              <div>
+                <div class="skill-panel-title">DEVELOPMENT</div>
+                <div class="skill-panel-sub">Engineering Digital Products</div>
+              </div>
+            </div>
+
+            <div class="skill-item d-flex gap-3">
+              <div class="skill-dot dot-blue"></div>
+              <div>
+                <div class="skill-item-name">Frontend Engineering</div>
+                <div class="skill-item-desc">Building responsive, accessible interfaces with React, HTML, CSS, and JavaScript — with a filmmaker's eye for composition and flow.</div>
+              </div>
+            </div>
+            <div class="skill-item d-flex gap-3">
+              <div class="skill-dot dot-blue"></div>
+              <div>
+                <div class="skill-item-name">Performance Optimization</div>
+                <div class="skill-item-desc">Reducing load times, improving Core Web Vitals, and delivering buttery-smooth experiences across all devices.</div>
+              </div>
+            </div>
+            <div class="skill-item d-flex gap-3">
+              <div class="skill-dot dot-blue"></div>
+              <div>
+                <div class="skill-item-name">Responsive & Accessible Design</div>
+                <div class="skill-item-desc">Every pixel considered. Every user accommodated. Interfaces built to flex, scale, and include.</div>
+              </div>
+            </div>
+            <div class="skill-item d-flex gap-3">
+              <div class="skill-dot dot-blue"></div>
+              <div>
+                <div class="skill-item-name">Version Control & Deployment</div>
+                <div class="skill-item-desc">Git/GitHub workflows, collaborative development, and shipping products with confidence and consistency.</div>
+              </div>
+            </div>
+            <div class="skill-item d-flex gap-3">
+              <div class="skill-dot dot-blue"></div>
+              <div>
+                <div class="skill-item-name">API Integration & Logic</div>
+                <div class="skill-item-desc">Connecting front-end experiences to real-world data — authentication flows, REST APIs, dynamic content delivery.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Film Panel -->
+        <div class="col-lg-6 reveal reveal-delay-2">
+          <div class="skill-panel">
+            <div class="d-flex align-items-center gap-3 skill-panel-header-border">
+              <div class="skill-icon-box skill-icon-film">⬛</div>
+              <div>
+                <div class="skill-panel-title">CINEMATOGRAPHY</div>
+                <div class="skill-panel-sub">Crafting Visual Narratives</div>
+              </div>
+            </div>
+
+            <div class="skill-item d-flex gap-3">
+              <div class="skill-dot dot-gold"></div>
+              <div>
+                <div class="skill-item-name">Camera Operation & Composition</div>
+                <div class="skill-item-desc">Mastery of framing, movement, and perspective — turning raw footage into deliberate, emotionally charged visual statements.</div>
+              </div>
+            </div>
+            <div class="skill-item d-flex gap-3">
+              <div class="skill-dot dot-gold"></div>
+              <div>
+                <div class="skill-item-name">Lighting Design</div>
+                <div class="skill-item-desc">Sculpting mood with light. From natural golden hour to controlled studio setups, light tells the story before the subject speaks.</div>
+              </div>
+            </div>
+            <div class="skill-item d-flex gap-3">
+              <div class="skill-dot dot-gold"></div>
+              <div>
+                <div class="skill-item-name">Color Grading</div>
+                <div class="skill-item-desc">The finishing touch that transforms footage into a unified visual language — consistency, atmosphere, and brand alignment.</div>
+              </div>
+            </div>
+            <div class="skill-item d-flex gap-3">
+              <div class="skill-dot dot-gold"></div>
+              <div>
+                <div class="skill-item-name">Post-Production & Editing</div>
+                <div class="skill-item-desc">Adobe Premiere Pro, After Effects, and motion graphics — precision editing that serves pacing, rhythm, and narrative purpose.</div>
+              </div>
+            </div>
+            <div class="skill-item d-flex gap-3">
+              <div class="skill-dot dot-gold"></div>
+              <div>
+                <div class="skill-item-name">Sound Design & Storyboarding</div>
+                <div class="skill-item-desc">Pre-production thinking that saves shoot time. Audio layering that completes the emotional picture.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       MY SKILLS SNAPSHOT
+  ══════════════════════════════════════════ -->
+  <section id="skills-snapshot" class="section-pad">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">My Skills Snapshot</div>
+        <h2 class="section-title">VERSATILE<br><span style="color:var(--blue)">TOOLKIT</span></h2>
+        <p style="color:var(--muted); max-width:600px; font-size:0.95rem; line-height:1.75; margin-top:1rem;">
+          A versatile toolkit for turning ideas into reality, blending creativity with technical expertise.
+        </p>
+      </div>
+
+      <div class="row g-4 mt-3">
+
+        <!-- Frontend Development -->
+        <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+          <div class="skill-snapshot-card">
+            <div class="skill-snapshot-header">
+              <div class="skill-snapshot-icon">⟨/⟩</div>
+              <div class="skill-snapshot-title">Frontend Development</div>
+            </div>
+            <div class="skill-snapshot-items">
+              <div class="skill-snapshot-item">
+                <span>HTML</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:85%;"></div></div>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-snapshot-item">
+                <span>CSS</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:80%;"></div></div>
+                <span class="skill-percent">>80%</span>
+              </div>
+              <div class="skill-snapshot-item">
+                <span>Bootstrap</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:75%;"></div></div>
+                <span class="skill-percent">75%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Editor & Cinematographer -->
+        <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+          <div class="skill-snapshot-card">
+            <div class="skill-snapshot-header">
+              <div class="skill-snapshot-icon">🎬</div>
+              <div class="skill-snapshot-title">Video Editor & Cinematographer</div>
+            </div>
+            <div class="skill-snapshot-items">
+              <div class="skill-snapshot-item">
+                <span>Shot Composition & Camera Operation</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:85%;"></div></div>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-snapshot-item">
+                <span>Lighting & Color Grading</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:80%;"></div></div>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-snapshot-item">
+                <span>Non-Linear Editing (Premiere Pro)</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:90%;"></div></div>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-snapshot-item">
+                <span>Motion Graphics (After Effects, CapCut)</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:75%;"></div></div>
+                <span class="skill-percent">75%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Travel Consultant & Visa Specialist -->
+        <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+          <div class="skill-snapshot-card">
+            <div class="skill-snapshot-header">
+              <div class="skill-snapshot-icon">✈️</div>
+              <div class="skill-snapshot-title">Travel Consultant & Visa Specialist</div>
+            </div>
+            <div class="skill-snapshot-items">
+              <div class="skill-snapshot-item">
+                <span>Visa Application Preparation & Editing</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:90%;"></div></div>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-snapshot-item">
+                <span>Travel Documentation</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:85%;"></div></div>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-snapshot-item">
+                <span>Itinerary Planning</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:80%;"></div></div>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-snapshot-item">
+                <span>End-to-End Consultation Services</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:85%;"></div></div>
+                <span class="skill-percent">85%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Digital & Office Tools -->
+        <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+          <div class="skill-snapshot-card">
+            <div class="skill-snapshot-header">
+              <div class="skill-snapshot-icon">💻</div>
+              <div class="skill-snapshot-title">Digital & Office Tools</div>
+            </div>
+            <div class="skill-snapshot-items">
+              <div class="skill-snapshot-item">
+                <span>Microsoft Office (Word, Excel, PowerPoint)</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:90%;"></div></div>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-snapshot-item">
+                <span>Adobe Creative Suite (Photoshop, Premiere Pro, After Effects)</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:80%;"></div></div>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-snapshot-item">
+                <span>CapCut</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:75%;"></div></div>
+                <span class="skill-percent">75%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       WORK / PORTFOLIO
+  ══════════════════════════════════════════ -->
+  <section id="work" class="section-pad bg-dark-alt">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Selected Work</div>
+        <h2 class="section-title">THE<br><span style="color:var(--blue)">PORTFOLIO</span></h2>
+      </div>
+
+      <div class="work-tabs mt-4">
+        <button class="work-tab active" onclick="switchTab('dev', this)">Development Projects</button>
+        <button class="work-tab" onclick="switchTab('film', this)">Cinematic Projects</button>
+      </div>
+
+      <!-- DEV PROJECTS -->
+      <div class="project-panel active" id="devPanel">
+        <div class="row g-3">
+
+          <div class="col-lg-4 col-md-6 reveal">
+            <div class="project-card dev">
+              <div class="project-num">01</div>
+              <div class="project-type type-dev">SaaS · Dashboard</div>
+              <h3 class="project-title">ANALYTICS COMMAND CENTER</h3>
+              <p class="project-desc">A real-time analytics dashboard for a B2B SaaS platform — transforming raw data into decision-ready visualizations. Reduced client reporting time by 60%.</p>
+              <div class="project-tags">
+                <span class="tag">React</span><span class="tag">Chart.js</span>
+                <span class="tag">REST API</span><span class="tag">CSS Grid</span>
+              </div>
+              <a href="#" class="project-link dev-link">View Project <span class="arrow">→</span></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+            <div class="project-card dev">
+              <div class="project-num">02</div>
+              <div class="project-type type-dev">E-Commerce · Platform</div>
+              <h3 class="project-title">ARTISAN MARKET STOREFRONT</h3>
+              <p class="project-desc">A full-featured e-commerce experience built for a local artisan collective. Seamless product browsing, cart, and checkout flow. Boosted conversion by 40%.</p>
+              <div class="project-tags">
+                <span class="tag">React</span><span class="tag">JavaScript</span>
+                <span class="tag">CSS</span><span class="tag">Payments API</span>
+              </div>
+              <a href="#" class="project-link dev-link">View Project <span class="arrow">→</span></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+            <div class="project-card dev">
+              <div class="project-num">03</div>
+              <div class="project-type type-dev">Web App · Auth</div>
+              <h3 class="project-title">SECURE MEMBER PORTAL</h3>
+              <p class="project-desc">A gated community platform with role-based authentication, personalized dashboards, and dynamic content delivery. Built with security-first architecture.</p>
+              <div class="project-tags">
+                <span class="tag">React</span><span class="tag">Auth Flow</span>
+                <span class="tag">JWT</span><span class="tag">GitHub</span>
+              </div>
+              <a href="#" class="project-link dev-link">View Project <span class="arrow">→</span></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 reveal">
+            <div class="project-card dev">
+              <div class="project-num">04</div>
+              <div class="project-type type-dev">Business · Website</div>
+              <h3 class="project-title">PROFESSIONAL FIRM PRESENCE</h3>
+              <p class="project-desc">A high-conversion business website for a professional services firm. Strategic copy, performance-optimized build, and mobile-first responsive layout.</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span>
+                <span class="tag">JavaScript</span><span class="tag">Deployment</span>
+              </div>
+              <a href="#" class="project-link dev-link">View Project <span class="arrow">→</span></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+            <div class="project-card dev">
+              <div class="project-num">05</div>
+              <div class="project-type type-dev">API · Integration</div>
+              <h3 class="project-title">WEATHER &amp; DATA EXPLORER</h3>
+              <p class="project-desc">An interactive application pulling live data from multiple APIs, presented through clean UI and smooth state management. Real-time, responsive, refined.</p>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span><span class="tag">Fetch API</span>
+                <span class="tag">React Hooks</span><span class="tag">CSS</span>
+              </div>
+              <a href="#" class="project-link dev-link">View Project <span class="arrow">→</span></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+            <div class="project-card dev" style="background:linear-gradient(135deg,rgba(26,143,255,0.06),var(--card));">
+              <div class="project-num" style="color:rgba(26,143,255,0.07);">→</div>
+              <div class="project-type type-dev">Your Idea</div>
+              <h3 class="project-title" style="color:var(--muted);">NEXT PROJECT</h3>
+              <p class="project-desc" style="color:rgba(240,244,255,0.3);">Have a project in mind? Let's engineer something remarkable together.</p>
+              <a href="#contact" class="project-link dev-link">Start a Conversation <span class="arrow">→</span></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FILM PROJECTS -->
+      <div class="project-panel" id="filmPanel">
+        <div class="row g-3">
+
+          <div class="col-lg-4 col-md-6 reveal">
+            <div class="project-card film">
+              <div class="film-strip"><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div></div>
+              <div class="project-num">01</div>
+              <div class="project-type type-film">Event Recap · Cinematographer & Video Editor </div>
+              <h3 class="project-title">SABI LOFT KATSU: COMPANY PARTY & AWARDS</h3>
+              <p class="project-desc">9.03min emotive recap of party + awards — pride, camaraderie, celebration. Style: Warm, intimate, shallow DOF; handheld + gimbal. Key beats: Arrival/anticipation (0–9s) → awards & reactions (9–36s) → quiet reflection + logo (36–9.03min). Visuals: Close-up textures (hands, trophy, food), soft amber grade, primes (35/50/85). Coverage: 2 cameras (stage + roaming), lav for host, macro lens, LED practicals.</p>
+              <div class="project-tags">
+                <span class="tag">Event Recap</span><span class="tag">Cinematographer</span><span class="tag">Color Grading</span><span class="tag">Sound Design</span>
+              </div>
+              <a href="https://drive.google.com/file/d/1Oy5h8GMFpxWwCiTVyZp-2DGbwxHDUtc8/view?usp=drivesdk" target="_blank" class="project-link film-link">Watch Film <span class="arrow">→</span></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+            <div class="project-card film">
+              <div class="film-strip"><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div></div>
+              <div class="project-num">02</div>
+              <div class="project-type type-film">Short Film · Director, </div>
+              <h3 class="project-title">TWIN PEAKS</h3>
+              <p class="project-desc">A short video featuring a twin duo navigating a quirky conversation, followed by a playful ad break.</p>
+              <div class="project-tags">
+                <span class="tag">Premiere Pro</span><span class="tag">Color Grading</span><span class="tag">Sound Design</span>
+              </div>
+              <a href="https://drive.google.com/file/d/1Mb99_QCGZ-wn1ia_FWegAQTTnGmLqdRJ/view?usp=sharing" class="project-link film-link">Watch Film <span class="arrow">→</span></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+            <div class="project-card film">
+              <div class="film-strip"><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div></div>
+              <div class="project-num">03</div>
+              <div class="project-type type-film">Brand Commercial · Cinematographer  & Video Editor</div>
+              <h3 class="project-title"> CAMPAIGN </h3>
+              <p class="project-desc">AVitech Sales Spher video showing their product and what it does (3.18min video) for the ads. Brand spot built around close-up textures, warm color science, and a narrative arc that transforms product into emotion.</p>
+              <div class="project-tags">
+                <span class="tag">After Effects</span><span class="tag">Lumetri Color</span><span class="tag">Storyboarding</span>
+              </div>
+              <a href="https://drive.google.com/file/d/1o4WRqmDimJQoYguKdwVbC198RFQiYyAG/view?usp=drivesdk" target="_blank" class="project-link film-link">Watch Commercial <span class="arrow">→</span></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+            <div class="project-card film">
+              <div class="film-strip"><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div></div>
+              <div class="project-num">04</div>
+              <div class="project-type type-film">Music Video · Editor</div>
+              <h3 class="project-title">FREQUENCY / UPRISING</h3>
+              <p class="project-desc">Fast-cut music video synchronized across 3 locations. Motion graphics overlay, beat-matched editing, and a high-contrast visual language built for social performance.</p>
+              <div class="project-tags">
+                <span class="tag">Premiere Pro</span><span class="tag">After Effects</span><span class="tag">Motion Graphics</span>
+              </div>
+              <a href="#" class="project-link film-link">Watch Video <span class="arrow">→</span></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+            <div class="project-card film">
+              <div class="film-strip"><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div></div>
+              <div class="project-num">05</div>
+              <div class="project-type type-film">Corporate Documentary</div>
+              <h3 class="project-title">BUILT FROM PURPOSE</h3>
+              <p class="project-desc">Internal documentary humanizing brand story through employee interviews, b-roll, and a cinematic treatment that elevated company culture.</p>
+              <div class="project-tags">
+                <span class="tag">Documentary</span><span class="tag">Interview</span><span class="tag">Corporate</span>
+              </div>
+              <a href="#" class="project-link film-link">Watch Documentary <span class="arrow">→</span></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+            <div class="project-card film">
+              <div class="film-strip"><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div><div class="film-frame"></div></div>
+              <div class="project-num">06</div>
+              <div class="project-type type-film">Social Campaign · Full Production</div>
+              <h3 class="project-title">SCROLL-STOP REEL SERIES</h3>
+              <p class="project-desc">Series of 15–30 second vertical reels. Hook within 1.5s, bold graphic overlays, and platform-native optimization engineered for engagement.</p>
+              <div class="project-tags">
+                <span class="tag">Social Media</span><span class="tag">Vertical Video</span><span class="tag">After Effects</span>
+              </div>
+              <a href="#" class="project-link film-link">View Campaign <span class="arrow">→</span></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+            <div class="project-card film" style="background:linear-gradient(135deg,rgba(201,168,76,0.05),var(--card));">
+              <div class="project-num" style="color:rgba(201,168,76,0.07);">▶</div>
+              <div class="project-type type-film">Your Vision</div>
+              <h3 class="project-title" style="color:var(--muted);">NEXT PROJECT</h3>
+              <p class="project-desc" style="color:rgba(240,244,255,0.3);">Have a story that needs to be told? Let's produce something unforgettable.</p>
+              <a href="#contact" class="project-link film-link">Start the Conversation <span class="arrow">→</span></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       PROCESS
+  ══════════════════════════════════════════ -->
+  <section id="process" class="section-pad">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">How I Work</div>
+        <h2 class="section-title">THE<br><span style="color:var(--blue)">PROCESS</span></h2>
+        <p style="color:var(--muted); max-width:520px; font-size:0.9rem; line-height:1.75; margin-top:1rem;">
+          Systems thinking powers both disciplines. Whether I'm shipping code or framing a shot, the underlying logic is identical: understand deeply, plan precisely, execute with intention, then refine until it's right.
+        </p>
+      </div>
+
+      <div class="row g-5 mt-2">
+
+        <!-- Dev Process -->
+        <div class="col-lg-6 reveal reveal-delay-1">
+          <div class="process-col-header">
+            <div class="skill-icon-box skill-icon-dev" style="width:36px;height:36px;font-size:0.9rem;">⟨/⟩</div>
+            <div class="process-col-title">DEVELOPMENT PROCESS</div>
+          </div>
+          <div class="process-step">
+            <div class="step-num step-num-dev">01</div>
+            <div><div class="step-name step-name-dev">Discovery</div><div class="step-desc">Deep dive into business goals, user needs, and technical constraints. Asking the right questions before writing a single line.</div></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num step-num-dev">02</div>
+            <div><div class="step-name step-name-dev">Architecture</div><div class="step-desc">Planning component structure, state management, and information flow. The blueprint before the build.</div></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num step-num-dev">03</div>
+            <div><div class="step-name step-name-dev">Build</div><div class="step-desc">Clean, semantic code. Iterative development with regular checkpoints. Responsiveness and accessibility baked in from the start.</div></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num step-num-dev">04</div>
+            <div><div class="step-name step-name-dev">Optimize</div><div class="step-desc">Performance audits, accessibility checks, cross-browser testing. Nothing ships slow.</div></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num step-num-dev">05</div>
+            <div><div class="step-name step-name-dev">Deploy</div><div class="step-desc">Confident deployment via GitHub, version-controlled and documented. Handoff with clarity, not confusion.</div></div>
+          </div>
+        </div>
+
+        <!-- Film Process -->
+        <div class="col-lg-6 reveal reveal-delay-2">
+          <div class="process-col-header">
+            <div class="skill-icon-box skill-icon-film" style="width:36px;height:36px;font-size:0.9rem;">⬛</div>
+            <div class="process-col-title">FILM PRODUCTION PROCESS</div>
+          </div>
+          <div class="process-step">
+            <div class="step-num step-num-film">01</div>
+            <div><div class="step-name step-name-film">Concept</div><div class="step-desc">Translating the brief into a visual idea. What is the emotional core? What should the audience feel at frame one — and at the last cut?</div></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num step-num-film">02</div>
+            <div><div class="step-name step-name-film">Pre-Production</div><div class="step-desc">Storyboarding, shot lists, location scouting, and lighting design. Every creative decision made before the camera rolls.</div></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num step-num-film">03</div>
+            <div><div class="step-name step-name-film">Shoot</div><div class="step-desc">Deliberate camera operation, intentional lighting, and controlled composition. Capturing coverage that enables powerful editing.</div></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num step-num-film">04</div>
+            <div><div class="step-name step-name-film">Edit</div><div class="step-desc">Building the sequence in Premiere Pro. Pacing, rhythm, and narrative arc refined until every cut serves the story.</div></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num step-num-film">05</div>
+            <div><div class="step-name step-name-film">Color, Sound & Delivery</div><div class="step-desc">Grading for emotional consistency. Layering audio for immersion. Final export optimized for the intended platform.</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════ -->
+  <section id="testimonials" class="section-pad bg-dark-alt">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Client Voices</div>
+        <h2 class="section-title">WHAT<br><span style="color:var(--gold)">THEY SAY</span></h2>
+      </div>
+
+      <div class="row g-3 mt-3">
+
+        <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+          <div class="testimonial-wrapper">
+            <div class="testimonial-stripe stripe-blue"></div>
+            <div class="testimonial-card">
+              <p class="testimonial-text">"Working with TAVANA MEDIA AND DIGITAL was genuinely different. They didn't just build what we asked — they questioned the brief, improved the architecture, and delivered a frontend that outperformed our previous platform on every metric. Bounce rate down 35%, conversion up significantly."</p>
+              <div class="d-flex align-items-center gap-3">
+                <div class="author-avatar avatar-blue">A</div>
+                <div>
+                  <div class="author-name">Adaeze Okonkwo</div>
+                  <div class="author-role">CEO, TechFlow Solutions</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+          <div class="testimonial-wrapper">
+            <div class="testimonial-stripe stripe-gold"></div>
+            <div class="testimonial-card">
+              <p class="testimonial-text">"I've worked with videographers who can shoot and editors who can cut. Rarely both. Rarer still is someone who understands story at a structural level. The brand commercial they produced didn't just look beautiful — it converted. Measurable spike in enquiries within 72 hours of posting."</p>
+              <div class="d-flex align-items-center gap-3">
+                <div class="author-avatar avatar-gold">K</div>
+                <div>
+                  <div class="author-name">Kofi Mensah</div>
+                  <div class="author-role">Founder, VUKA Brand Studio</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+          <div class="testimonial-wrapper">
+            <div class="testimonial-stripe stripe-white"></div>
+            <div class="testimonial-card">
+              <p class="testimonial-text">"Collaborating across disciplines is always a risk. With this team, it was the opposite — a genuine creative multiplier. They brought frontend thinking to our film workflow and cinematic sensibility to our digital work. The line between the two crafts blurred in the best possible way."</p>
+              <div class="d-flex align-items-center gap-3">
+                <div class="author-avatar avatar-white">S</div>
+                <div>
+                  <div class="author-name">Sade Olusanya</div>
+                  <div class="author-role">Creative Director, Prism Collective</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3 mt-3 justify-content-center">
+  <div class="col-lg-6">
+    <div class="testimonial-image-wrapper reveal">
+      <img src="WhatsApp Image.jpeg" alt="Client testimonial screenshot" class="testimonial-img" />
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="container contact-content text-center">
+      <div class="section-label justify-content-center mb-1">Let's Create</div>
+      <h3 class="reveal" style="font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--muted); font-weight:300; margin-bottom:0;">TAVANA MEDIA AND DIGITAL</h3>
+
+      <p class="contact-closing reveal reveal-delay-1">
+        Let's build something <span>powerful</span> —<br>visually and digitally.
+      </p>
+
+      <div class="d-flex justify-content-center mb-5 reveal reveal-delay-2">
+        <a href="mailto:adewoleadam9@gmail.com" class="btn-primary-custom" style="font-size:0.82rem; padding:1rem 2.2rem;">
+          adewoleadam9@gmail.com →
+        </a>
+        <a href="tel:09069394807" class="btn-primary-custom" style="font-size:0.82rem; padding:1rem 2.2rem; margin-left: 10px;">
+          📞 09069394807
+        </a>
+      </div>
+
+      <div class="d-flex justify-content-center flex-wrap gap-3 reveal reveal-delay-3">
+        <a href="https://www.instagram.com/tavana_ph?igsh=ZXZ6ZzFrbGx2Z3Y5&utm_source=qr" target="_blank" class="contact-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          Instagram
+        </a>
+        <a href="https://www.tiktok.com/@toluwani1027?_r=1&_t=ZS-94HKM7FaTLO" target="_blank" class="contact-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          TikTok
+        </a>
+        <a href="mailto:adewoleadam9@gmail.com" class="contact-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Gmail
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="tavana-footer">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div class="d-flex align-items-center gap-3">
+          <img src="TAVANA-removebg-preview.png"
+               alt="TAVANA Logo"
+               class="footer-logo-img" />
+          <div class="footer-brand-name">TAVANA<span>.</span> MEDIA AND DIGITAL</div>
+        </div>
+        <div class="footer-copy">© 2025 Tavana Media And Digital — All Rights Reserved</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- External Portfolio Script (deferred) -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>
