@@ -105,7 +105,7 @@ body {
   color: var(--white);
   font-family: var(--font-body);
   font-weight: 300;
-  overflow-x: hidden;
+  overflow-x: clip;
   cursor: none;
   -webkit-font-smoothing: antialiased;
 }
@@ -166,6 +166,7 @@ img { max-width: 100%; display: block; }
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-bottom: 1px solid rgba(252, 254, 255, 0.719);
+  overflow: hidden;
 }
 
 .nav-logo-img {
@@ -328,7 +329,7 @@ img { max-width: 100%; display: block; }
 
 .hero-eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: clamp(0.55rem, 2vw, 0.65rem);
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--blue);
@@ -363,7 +364,7 @@ img { max-width: 100%; display: block; }
 .hero-headline .line-gold { color: var(--gold); }
 
 .hero-sub {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   color: var(--muted);
   line-height: 1.75;
   margin-bottom: 2rem;
@@ -373,7 +374,7 @@ img { max-width: 100%; display: block; }
 
 .hero-statement {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: clamp(0.62rem, 2vw, 0.72rem);
   color: rgba(73, 132, 199, 0.4);
   letter-spacing: 0.05em;
   line-height: 2.1;
@@ -501,20 +502,22 @@ img { max-width: 100%; display: block; }
 .btn-primary-custom {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   background: var(--blue);
   color: var(--black);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: clamp(0.6rem, 2vw, 0.68rem);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding: 0.85rem 1.6rem;
+  padding: clamp(0.7rem, 2vw, 0.85rem) clamp(1.2rem, 3vw, 1.6rem);
   text-decoration: none;
   transition: all var(--transition-base);
   cursor: none;
   border: 1px solid var(--blue);
   font-weight: 400;
   border-radius: 0;
+  white-space: nowrap;
 }
 
 .btn-primary-custom:hover {
@@ -527,19 +530,21 @@ img { max-width: 100%; display: block; }
 .btn-outline-custom {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   background: transparent;
   color: var(--white);
   border: 1px solid var(--border);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: clamp(0.6rem, 2vw, 0.68rem);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding: 0.85rem 1.6rem;
+  padding: clamp(0.7rem, 2vw, 0.85rem) clamp(1.2rem, 3vw, 1.6rem);
   text-decoration: none;
   transition: all var(--transition-base);
   cursor: none;
   border-radius: 0;
+  white-space: nowrap;
 }
 
 .btn-outline-custom:hover {
@@ -551,19 +556,21 @@ img { max-width: 100%; display: block; }
 .btn-ghost-custom {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   background: transparent;
   color: var(--gold);
   border: 1px solid rgba(201, 168, 76, 0.35);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: clamp(0.6rem, 2vw, 0.68rem);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding: 0.85rem 1.6rem;
+  padding: clamp(0.7rem, 2vw, 0.85rem) clamp(1.2rem, 3vw, 1.6rem);
   text-decoration: none;
   transition: all var(--transition-base);
   cursor: none;
   border-radius: 0;
+  white-space: nowrap;
 }
 
 .btn-ghost-custom:hover {
@@ -604,11 +611,12 @@ img { max-width: 100%; display: block; }
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(2rem, 5vw, 4.5rem);
   line-height: 0.97;
   letter-spacing: 0.03em;
   margin-bottom: 1.2rem;
   color: var(--white);
+  word-wrap: break-word;
 }
 
 .section-divider {
@@ -644,8 +652,9 @@ img { max-width: 100%; display: block; }
 .stat-card {
   border: 1px solid var(--border);
   background: var(--card);
-  padding: 1.5rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
   transition: all var(--transition-base);
+  width: 100%;
 }
 
 .stat-card:hover {
@@ -656,7 +665,7 @@ img { max-width: 100%; display: block; }
 
 .stat-num {
   font-family: var(--font-display);
-  font-size: 2.8rem;
+  font-size: clamp(2rem, 5vw, 2.8rem);
   color: var(--blue);
   letter-spacing: 0.05em;
   line-height: 1;
@@ -720,9 +729,10 @@ img { max-width: 100%; display: block; }
 .skill-panel {
   border: 1px solid var(--border);
   background: var(--card);
-  padding: 2.5rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
   height: 100%;
   transition: border-color var(--transition-base);
+  width: 100%;
 }
 
 .skill-panel:hover {
@@ -824,12 +834,13 @@ img { max-width: 100%; display: block; }
 
 .project-card {
   background: var(--card);
-  padding: 2.5rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
   border: 1px solid var(--border);
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
   height: 100%;
+  width: 100%;
 }
 
 .project-card::before {
@@ -876,10 +887,11 @@ img { max-width: 100%; display: block; }
 
 .project-title {
   font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-size: clamp(1.1rem, 3vw, 1.45rem);
   letter-spacing: 0.03em;
   margin-bottom: 0.9rem;
   line-height: 1.1;
+  word-wrap: break-word;
 }
 
 .project-desc {
@@ -1005,11 +1017,12 @@ img { max-width: 100%; display: block; }
 
 .testimonial-card {
   background: var(--card);
-  padding: 2.5rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
   border: 1px solid var(--border);
   position: relative;
   flex: 1;
   transition: border-color var(--transition-base);
+  width: 100%;
 }
 
 .testimonial-card:hover { border-color: var(--border-hover); }
@@ -1092,12 +1105,14 @@ img { max-width: 100%; display: block; }
 
 .contact-closing {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-size: clamp(1.5rem, 5vw, 3.2rem);
   color: var(--white);
   letter-spacing: 0.03em;
   line-height: 1.2;
   margin: 1.5rem auto 2.5rem;
   max-width: 620px;
+  word-wrap: break-word;
+  padding: 0 1rem;
 }
 
 .contact-closing span { color: var(--blue); }
@@ -1270,69 +1285,304 @@ img { max-width: 100%; display: block; }
 /* ============================================================
    RESPONSIVE OVERRIDES
    ============================================================ */
+
+/* Tablet and below */
 @media (max-width: 991.98px) {
   .hero-code-panel { display: none; }
-  .hero-headline { font-size: clamp(3rem, 11vw, 5rem); }
-  .section-pad { padding: 5rem 0; }
+  .hero-headline { font-size: clamp(2.5rem, 8vw, 5rem); }
+  .section-pad { padding: 4rem 1.5rem; }
+  .tavana-nav { padding: 0.8rem 0; }
+  #hero { padding: 6rem 1.5rem 3rem; }
 }
 
+/* Mobile landscape and tablet */
 @media (max-width: 767.98px) {
-  .hero-actions { flex-direction: column; align-items: flex-start; }
+  html { font-size: 14px; }
+  
+  /* Hero section mobile */
+  #hero {
+    padding: 5rem 1rem 2rem;
+    min-height: auto;
+  }
+  
+  .hero-content {
+    text-align: center;
+    padding: 0;
+  }
+  
+  .hero-eyebrow::before {
+    display: none;
+  }
+  
+  .hero-eyebrow {
+    justify-content: center;
+  }
+  
+  .hero-headline { 
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin-bottom: 1rem;
+  }
+  
+  .hero-sub {
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-statement {
+    margin-bottom: 2rem;
+    border-left: none;
+    border-top: 2px solid var(--gold);
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+  
+  .hero-actions a {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
   .btn-primary-custom,
   .btn-outline-custom,
-  .btn-ghost-custom { width: 100%; justify-content: center; }
-  .work-tabs { overflow-x: auto; }
-  .work-tab  { white-space: nowrap; }
-  .contact-closing { font-size: 1.6rem; }
+  .btn-ghost-custom {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
   
-  /* Mobile Navigation Logo */
+  /* Navigation mobile */
   .nav-logo-img {
-    height: 42px !important;
+    height: 40px !important;
   }
   
   .nav-brand-text {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   
   .nav-brand-sub {
-    font-size: 0.45rem;
+    font-size: 0.42rem;
   }
   
   .navbar-brand {
     gap: 0.5rem !important;
   }
+  
+  .nav-link-item {
+    font-size: 0.6rem;
+    padding: 0.4rem 0;
+  }
+  
+  .btn-nav-cta {
+    font-size: 0.6rem;
+    padding: 0.4rem 0.9rem;
+  }
+  
+  /* Sections */
+  .section-label {
+    font-size: 0.55rem;
+  }
+  
+  .section-title {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  
+  /* Cards */
+  .stat-card,
+  .skill-panel,
+  .skill-snapshot-card,
+  .project-card,
+  .testimonial-card {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .stat-num {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+  
+  .stat-label {
+    font-size: 0.52rem;
+  }
+  
+  .skill-icon-box {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+  
+  .skill-panel-title {
+    font-size: 1.2rem;
+  }
+  
+  .project-type,
+  .project-desc,
+  .step-desc,
+  .testimonial-text,
+  .about-text p {
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+  
+  .project-title {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+  }
+  
+  .work-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 2rem;
+  }
+  
+  .work-tab {
+    white-space: nowrap;
+    font-size: 0.6rem;
+    padding: 0.7rem 1.2rem;
+  }
+  
+  .contact-closing {
+    font-size: clamp(1.3rem, 4vw, 2.2rem);
+  }
+  
+  .contact-link {
+    font-size: 0.6rem;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  /* Scroll indicator */
+  .scroll-indicator {
+    bottom: 1.5rem;
+  }
+  
+  .scroll-text {
+    font-size: 0.5rem;
+  }
 }
 
-@media (max-width: 479.98px) {
+/* Small phones */
+@media (max-width: 575.98px) {
+  html { font-size: 13px; }
+  
+  #hero {
+    padding: 4.5rem 0.75rem 1.5rem;
+  }
+  
+  .hero-headline {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-eyebrow {
+    margin-bottom: 1rem;
+    font-size: 0.5rem;
+  }
+  
+  .hero-sub {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .hero-statement {
+    font-size: 0.58rem;
+    margin-bottom: 1.5rem;
+    padding-top: 0.8rem;
+    line-height: 1.8;
+  }
+  
   .nav-logo-img {
     height: 36px !important;
   }
   
   .nav-brand-text {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
   
   .nav-brand-sub {
-    font-size: 0.4rem;
+    font-size: 0.38rem;
     display: none;
   }
+  
+  .section-title {
+    font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  }
+  
+  .highlight-quote {
+    font-size: 1.1rem !important;
+    padding-left: 1rem !important;
+  }
+  
+  .project-num {
+    font-size: 2.5rem;
+    top: 0.5rem;
+    right: 0.8rem;
+  }
+  
+  .stat-num {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+  }
+  
+  .skill-snapshot-header {
+    gap: 0.75rem;
+  }
+  
+  .skill-snapshot-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .skill-snapshot-title {
+    font-size: 0.95rem;
+  }
+  
+  .process-col-title {
+    font-size: 1.1rem;
+  }
+  
+  .author-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  
+  #contact {
+    padding: 5rem 1rem;
+  }
 }
 
-/* extra tweaks for true mobile‑full responsiveness */
-@media (max-width: 767.98px) {
-  .hero-content {
-    text-align: center;
-    padding: 4rem 1rem;
+/* Extra small phones */
+@media (max-width: 359.98px) {
+  html { font-size: 12px; }
+  
+  .hero-headline {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
   }
-  .hero-actions a {
-    margin-bottom: 0.75rem;
-  }
-  .stat-card {
-    flex: 1 1 100%;
+  
+  .section-title {
+    font-size: clamp(1.4rem, 3vw, 2rem);
   }
 }
 
-@media (max-width: 575.98px) {
-  .hero-headline { font-size: 2.5rem; }
-  .hero-sub { font-size: 1rem; }
+/* Landscape phones */
+@media (max-height: 600px) and (max-width: 1024px) {
+  #hero {
+    min-height: auto;
+    padding: 4rem 1rem 2rem;
+  }
+  
+  .hero-headline {
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-actions {
+    gap: 0.5rem;
+  }
+  
+  .scroll-indicator {
+    display: none;
+  }
 }
