@@ -293,7 +293,7 @@ img { max-width: 100%; display: block; }
   background-repeat: no-repeat;
   /* Gradient overlay to fade the image - lighter at top for text visibility */
   background-blend-mode:overlay;
-  background-color: rgba(247, 251, 255, 0.26);
+  background-color: rgba(247, 251, 255, 0.103);
 }
 
 /* Additional overlay for more text readability */
@@ -365,7 +365,7 @@ img { max-width: 100%; display: block; }
 
 .hero-sub {
   font-size: clamp(0.9rem, 2.5vw, 1rem);
-  color: var(--muted);
+  color: black;
   line-height: 1.75;
   margin-bottom: 2rem;
   opacity: 0;
@@ -375,7 +375,7 @@ img { max-width: 100%; display: block; }
 .hero-statement {
   font-family: var(--font-mono);
   font-size: clamp(0.62rem, 2vw, 0.72rem);
-  color: rgba(73, 132, 199, 0.4);
+  color: rgb(73, 77, 199);
   letter-spacing: 0.05em;
   line-height: 2.1;
   margin-bottom: 3rem;
@@ -398,7 +398,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   z-index: 3;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.584);
   padding: 0;
   height: 100%;
   min-height: 480px;
